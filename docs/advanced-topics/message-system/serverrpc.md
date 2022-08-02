@@ -26,7 +26,7 @@ public class SomeNetworkBehaviour : NetworkBehaviour
 The above example uses the default [ServerRpc] attribute settings which only allows a client owner (client that owns `NetworkObject` associated with the `NetworkBehaviour` containing the `ServerRpc` method) invocation rights.  Any client that is not the owner will not be allowed to invoke the `ServerRpc`.
 
 ## ServerRpc Ownership And ServerRpcParams
-There are times where you might want any client to have `SeverRpc` invocation rights.  You can easily accomplish this by setting the `ServerRpc` attribute's `RequireOwnership` parameter to false like in the example below:
+There are times where you might want any client to have `ServerRpc` invocation rights.  You can easily accomplish this by setting the `ServerRpc` attribute's `RequireOwnership` parameter to false like in the example below:
 ```csharp
 [ServerRpc(RequireOwnership = false)]
 public void MyGlobalServerRpc(ServerRpcParams serverRpcParams = default)
